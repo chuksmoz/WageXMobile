@@ -1,7 +1,9 @@
 import 'dart:ui';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wage_x/src/presentation/router/router.gr.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
@@ -52,7 +54,9 @@ class SplashScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontSize: 40.sp
                       ),),
-                      onPressed: (){},
+                      onPressed: (){
+                        ExtendedNavigator.of(context).push(Routes.loginScreen);
+                      },
                     )
                   ],
                 ),

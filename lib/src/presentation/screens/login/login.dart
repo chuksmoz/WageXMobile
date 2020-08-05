@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wage_x/src/presentation/router/router.gr.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -13,44 +15,44 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(height: 250.h,),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 150.h),
-                  child: Image.asset('assets/images/logo_blue.png'),
-                ),
-                SizedBox(height: 150.h,),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 90.w),
-                  child: Column(
-                    children: <Widget>[
-                      usernameField(),
-                      SizedBox(height: 50.h,),
-                      passwordField(),
-                      SizedBox(height: 100.h,),
-                      loginButton(),
-                      SizedBox(height: 40.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          InkWell(
-                            onTap: (){},
-                            child: const Text('Forgotten Password', style: TextStyle(
-                              color: Colors.white
-                            ),)
-                          ),
-                          InkWell(
-                            onTap: (){},
-                            child: Text('Create an account', 
-                            style: GoogleFonts.lato(
-                              textStyle: TextStyle(
-                                color: Colors.lightBlue[400]
-                              )
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 150.h),
+                child: Image.asset('assets/images/logo_blue.png'),
+              ),
+              SizedBox(height: 150.h,),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 90.w),
+                child: Column(
+                  children: <Widget>[
+                    usernameField(),
+                    SizedBox(height: 50.h,),
+                    passwordField(),
+                    SizedBox(height: 100.h,),
+                    loginButton(),
+                    SizedBox(height: 40.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        InkWell(
+                          onTap: (){},
+                          child: const Text('Forgotten Password', style: TextStyle(
+                            color: Colors.white
+                          ),)
+                        ),
+                        InkWell(
+                          onTap: () => ExtendedNavigator.of(context).push(Routes.signupScreen),
+                          child: Text('Create an account', 
+                          style: GoogleFonts.lato(
+                            textStyle: TextStyle(
+                              color: Colors.lightBlue[400]
                             )
-                            )) 
-                        ],
-                      )
-                    ],
-                  ),
-                )
+                          )
+                          )) 
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),

@@ -12,13 +12,15 @@ import 'package:flutter/material.dart';
 import '../screens/screen.dart';
 
 class Routes {
-  static const String splashScreen = '/splash-screen';
+  static const String splashScreen = '/';
   static const String graph = '/Graph';
-  static const String loginScreen = '/';
+  static const String loginScreen = '/login-screen';
+  static const String signupScreen = '/signup-screen';
   static const all = <String>{
     splashScreen,
     graph,
     loginScreen,
+    signupScreen,
   };
 }
 
@@ -29,6 +31,7 @@ class Router extends RouterBase {
     RouteDef(Routes.splashScreen, page: SplashScreen),
     RouteDef(Routes.graph, page: Graph),
     RouteDef(Routes.loginScreen, page: LoginScreen),
+    RouteDef(Routes.signupScreen, page: SignupScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -48,6 +51,12 @@ class Router extends RouterBase {
     LoginScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => LoginScreen(),
+        settings: data,
+      );
+    },
+    SignupScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SignupScreen(),
         settings: data,
       );
     },
