@@ -54,7 +54,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 60.h,),
                 LoanLimitCard(),
                 SizedBox(height: 60.h,),
-                ActiveLoanCart()
+                ActiveLoanCart(),
+                SizedBox(height: 60.h,),
+                CreditScoreCard(),
+                SizedBox(height: 70.h,),
+                Text('Recent Loan Application', style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50.sp
+                ),),
+                SizedBox(height: 70.h,),
+                RecentLoanCard(),
+                SizedBox(height: 60.h,),
+                RecentLoanCard(),
+                SizedBox(height: 60.h,),
               ],
             )
           )

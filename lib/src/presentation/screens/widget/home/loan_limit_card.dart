@@ -21,7 +21,7 @@ class LoanLimitCard extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: 'NGN 50,00', style: TextStyle(
+                text: 'NGN 50,000', style: TextStyle(
                   color: Colors.lightBlue,
                   fontWeight: FontWeight.bold
                 )
