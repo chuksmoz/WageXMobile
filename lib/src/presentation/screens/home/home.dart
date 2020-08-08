@@ -39,20 +39,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   children: <Widget>[
                     topLeftCard(),
-                    SizedBox(width: 60.w,),
+                    SizedBox(width: 50.w,),
                     topRightCard()
                   ],
                 ),
-                SizedBox(height: 60.h,),
+                SizedBox(height: 50.h,),
                 Row(
                   children: <Widget>[
                     bottomLeftCard(),
-                    SizedBox(width: 60.w,),
+                    SizedBox(width: 50.w,),
                     bottomRightCard()
                   ],
                 ),
                 SizedBox(height: 60.h,),
-                LoanLimitCard()
+                LoanLimitCard(),
+                SizedBox(height: 60.h,),
+                ActiveLoanCart()
               ],
             )
           )
@@ -83,7 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('data'),
+            Icon(
+              Icons.book,
+              color: Colors.white,
+              size: 100.h,
+            ),
             SizedBox(height: 30.h,),
             Text('Loan application', style: TextStyle(
               color: Colors.white
@@ -91,7 +97,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 50.h,),
             Text('10', style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+              fontSize: 60.sp
             ),),
           ],
         ),
@@ -110,7 +117,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('data'),
+            Icon(
+              Icons.book,
+              color: Colors.white,
+              size: 100.h,
+            ),
             SizedBox(height: 30.h,),
             Text('Loan application', style: TextStyle(
               color: Colors.white
@@ -118,7 +129,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 50.h,),
             Text('10', style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+              fontSize: 60.sp
             ),),
           ],
         ),
@@ -137,7 +149,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('data'),
+            Icon(
+              Icons.book,
+              color: Colors.white,
+              size: 100.h,
+            ),
             SizedBox(height: 30.h,),
             Text('Loan application', style: TextStyle(
               color: Colors.white
@@ -145,7 +161,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 50.h,),
             Text('10', style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+              fontSize: 60.sp
             ),),
           ],
         ),
@@ -164,7 +181,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('data'),
+            Icon(
+              Icons.book,
+              color: Colors.white,
+              size: 100.h,
+            ),
             SizedBox(height: 30.h,),
             Text('Loan application', style: TextStyle(
               color: Colors.white
@@ -172,7 +193,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 50.h,),
             Text('10', style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+              fontSize: 60.sp
             ),),
           ],
         ),
