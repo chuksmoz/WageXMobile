@@ -152,7 +152,7 @@ class SignupScreen extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.only(left: 12),
             child: Icon(Icons.menu),
           ),
           Expanded(

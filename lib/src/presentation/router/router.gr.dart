@@ -13,11 +13,13 @@ import '../screens/screen.dart';
 
 class Routes {
   static const String splashScreen = '/';
+  static const String homeScreen = '/home-screen';
   static const String graph = '/Graph';
   static const String loginScreen = '/login-screen';
   static const String signupScreen = '/signup-screen';
   static const all = <String>{
     splashScreen,
+    homeScreen,
     graph,
     loginScreen,
     signupScreen,
@@ -29,6 +31,7 @@ class Router extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.splashScreen, page: SplashScreen),
+    RouteDef(Routes.homeScreen, page: HomeScreen),
     RouteDef(Routes.graph, page: Graph),
     RouteDef(Routes.loginScreen, page: LoginScreen),
     RouteDef(Routes.signupScreen, page: SignupScreen),
@@ -39,6 +42,12 @@ class Router extends RouterBase {
     SplashScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SplashScreen(),
+        settings: data,
+      );
+    },
+    HomeScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => HomeScreen(),
         settings: data,
       );
     },

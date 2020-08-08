@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 50.h,),
                     passwordField(),
                     SizedBox(height: 100.h,),
-                    loginButton(),
+                    loginButton(context),
                     SizedBox(height: 40.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -105,13 +105,15 @@ class LoginScreen extends StatelessWidget {
   }
 
 
-  Widget loginButton(){
+  Widget loginButton(BuildContext context){
     return MaterialButton(
       minWidth: double.infinity,
       color: Colors.lightBlue[300],
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       height: 130.h,
-      onPressed: (){},
+      onPressed: (){
+        ExtendedNavigator.of(context).push(Routes.homeScreen);
+      },
       child: Text("LOGIN", style: TextStyle(
         color: Colors.white
       ),),
