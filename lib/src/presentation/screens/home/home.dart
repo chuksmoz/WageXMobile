@@ -72,17 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      bottomNavigationBar: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Icon(Icons.email),
-            Icon(Icons.email),
-            Icon(Icons.email),
-            Icon(Icons.email),
-          ],
-        ),
-      ),
+      bottomNavigationBar: BottonBar(),
     );
   }
 

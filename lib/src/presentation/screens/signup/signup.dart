@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wage_x/src/presentation/router/router.gr.dart';
 
 class SignupScreen extends StatelessWidget {
   @override
@@ -27,7 +29,7 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(height: 30.h,),
                     companyDropdown(),
                     SizedBox(height: 50.h,),
-                    loginButton(),
+                    submitButton(context),
                     SizedBox(height: 30.h,),
                     Center(
                       child: RichText(
@@ -175,13 +177,15 @@ class SignupScreen extends StatelessWidget {
       ),
     );
   }
-  Widget loginButton(){
+  Widget submitButton(BuildContext context){
     return MaterialButton(
       minWidth: double.infinity,
       color: Colors.black87,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       height: 130.h,
-      onPressed: (){},
+      onPressed: (){
+        ExtendedNavigator.of(context).push(Routes.pinVerificationScreen);
+      },
       child: Text("CREATE ACCOUNT", style: TextStyle(
         color: Colors.white,
         letterSpacing: 1

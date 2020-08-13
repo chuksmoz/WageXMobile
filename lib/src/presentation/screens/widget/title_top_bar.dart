@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wage_x/src/presentation/router/router.gr.dart';
 
 class TitleTopBar extends StatelessWidget {
   final String title;
@@ -20,7 +22,9 @@ class TitleTopBar extends StatelessWidget {
               letterSpacing: 1.5
             ),),
             FlatButton(
-              onPressed: (){}, 
+              onPressed: (){
+                ExtendedNavigator.of(context).push(Routes.loginScreen);
+              }, 
               child: Text("Logout", style:TextStyle(
                 color: Colors.white,
                 fontSize: 40.sp,
